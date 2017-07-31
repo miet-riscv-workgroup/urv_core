@@ -1,0 +1,232 @@
+CAPI=1
+[main]
+name = ::general_cores:0
+
+[fileset common]
+files =
+  modules/common/gc_arbitrated_mux.vhd
+  modules/common/gc_bicolor_led_ctrl.vhd
+  modules/common/gc_big_adder.vhd
+  modules/common/gc_crc_gen.vhd
+  modules/common/gc_delay_gen.vhd
+  modules/common/gc_dual_pi_controller.vhd
+  modules/common/gc_dyn_glitch_filt.vhd
+  modules/common/gc_extend_pulse.vhd
+  modules/common/gc_frequency_meter.vhd
+  modules/common/gc_fsm_watchdog.vhd
+  modules/common/gc_glitch_filt.vhd
+  modules/common/gc_i2c_slave.vhd
+  modules/common/gc_moving_average.vhd
+  modules/common/gc_prio_encoder.vhd
+  modules/common/gc_pulse_synchronizer2.vhd
+  modules/common/gc_pulse_synchronizer.vhd
+  modules/common/gc_reset.vhd
+  modules/common/gc_rr_arbiter.vhd
+  modules/common/gc_serial_dac.vhd
+  modules/common/gc_sync_ffs.vhd
+  modules/common/gc_sync_register.vhd
+  modules/common/gc_word_packer.vhd
+  modules/common/gencores_pkg.vhd
+file_type=vhdlSource
+
+[fileset genrams]
+files =
+  modules/genrams/genram_pkg.vhd
+  modules/genrams/memory_loader_pkg.vhd
+file_type=vhdlSource
+
+[fileset genrams_xilinx]
+files =
+  modules/genrams/xilinx/gc_shiftreg.vhd
+  modules/genrams/xilinx/generic_dpram_dualclock.vhd
+  modules/genrams/xilinx/generic_dpram_sameclock.vhd
+  modules/genrams/xilinx/generic_dpram.vhd
+  modules/genrams/xilinx/generic_simple_dpram.vhd
+  modules/genrams/xilinx/generic_spram.vhd
+file_type=vhdlSource
+
+[fileset genrams_xilinx_virtex6]
+files =
+  modules/genrams/xilinx/virtex6/generic_async_fifo.vhd
+  modules/genrams/xilinx/virtex6/generic_sync_fifo.vhd
+  modules/genrams/xilinx/virtex6/v6_fifo_pkg.vhd
+  modules/genrams/xilinx/virtex6/v6_hwfifo_wrapper.vhd
+file_type=vhdlSource
+
+[fileset genrams_common]
+files =
+  modules/genrams/common/generic_shiftreg_fifo.vhd
+  modules/genrams/common/inferred_async_fifo.vhd
+  modules/genrams/common/inferred_sync_fifo.vhd
+file_type=vhdlSource
+
+[fileset genrams_generic]
+files =
+  modules/genrams/generic/generic_async_fifo.vhd
+  modules/genrams/generic/generic_sync_fifo.vhd
+file_type=vhdlSource
+
+[fileset wishbone]
+files =
+  modules/wishbone/wishbone_pkg.vhd
+file_type=vhdlSource
+
+[fileset wb_async_bridge]
+files =
+  modules/wishbone/wb_async_bridge/wb_async_bridge.vhd
+  modules/wishbone/wb_async_bridge/xwb_async_bridge.vhd
+file_type=vhdlSource
+
+[fileset wb_bus_fanout]
+files =
+  modules/wishbone/wb_bus_fanout/xwb_bus_fanout.vhd
+file_type=vhdlSource
+
+[fileset wb_clock_crossing]
+files =
+  modules/wishbone/wb_clock_crossing/xwb_clock_crossing.vhd
+file_type=vhdlSource
+
+[fileset wb_conmax]
+files =
+  modules/wishbone/wb_conmax/wb_conmax_arb.vhd
+  modules/wishbone/wb_conmax/wb_conmax_master_if.vhd
+  modules/wishbone/wb_conmax/wb_conmax_msel.vhd
+  modules/wishbone/wb_conmax/wbconmax_pkg.vhd
+  modules/wishbone/wb_conmax/wb_conmax_pri_dec.vhd
+  modules/wishbone/wb_conmax/wb_conmax_pri_enc.vhd
+  modules/wishbone/wb_conmax/wb_conmax_rf.vhd
+  modules/wishbone/wb_conmax/wb_conmax_slave_if.vhd
+  modules/wishbone/wb_conmax/wb_conmax_top.vhd
+  modules/wishbone/wb_conmax/xwb_conmax.vhd
+file_type=vhdlSource
+
+[fileset wb_crossbar]
+files =
+  modules/wishbone/wb_crossbar/sdb_rom.vhd
+  modules/wishbone/wb_crossbar/xwb_crossbar.vhd
+  modules/wishbone/wb_crossbar/xwb_register_link.vhd
+  modules/wishbone/wb_crossbar/xwb_sdb_crossbar.vhd
+file_type=vhdlSource
+
+[fileset wb_dma]
+files =
+  modules/wishbone/wb_dma/xwb_dma.vhd
+  modules/wishbone/wb_dma/xwb_streamer.vhd
+file_type=vhdlSource
+
+[fileset wb_dpram]
+files =
+  modules/wishbone/wb_dpram/xwb_dpram.vhd
+  modules/wishbone/wb_dpram/xwb_dpram_mixed.vhd
+file_type=vhdlSource
+
+[fileset wbgen2]
+files =
+  modules/wishbone/wbgen2/wbgen2_dpssram.vhd
+  modules/wishbone/wbgen2/wbgen2_eic.vhd
+  modules/wishbone/wbgen2/wbgen2_fifo_async.vhd
+  modules/wishbone/wbgen2/wbgen2_fifo_sync.vhd
+  modules/wishbone/wbgen2/wbgen2_pkg.vhd
+file_type=vhdlSource
+
+[fileset wb_gpio_port]
+files =
+  modules/wishbone/wb_gpio_port/xwb_gpio_port.vhd
+  modules/wishbone/wb_gpio_port/wb_gpio_port.vhd
+file_type=vhdlSource
+
+[fileset wb_i2c_bridge]
+files =
+  modules/wishbone/wb_i2c_bridge/wb_i2c_bridge.vhd
+file_type=vhdlSource
+
+[fileset wb_i2c_master]
+files =
+  modules/wishbone/wb_i2c_master/i2c_master_bit_ctrl.vhd
+  modules/wishbone/wb_i2c_master/i2c_master_byte_ctrl.vhd
+  modules/wishbone/wb_i2c_master/i2c_master_top.vhd
+  modules/wishbone/wb_i2c_master/wb_i2c_master.vhd
+  modules/wishbone/wb_i2c_master/xwb_i2c_master.vhd
+file_type=vhdlSource
+
+[fileset wb_irq]
+files =
+  modules/wishbone/wb_irq/irqm_core.vhd
+  modules/wishbone/wb_irq/wb_irq_lm32.vhd
+  modules/wishbone/wb_irq/wb_irq_master.vhd
+  modules/wishbone/wb_irq/wb_irq_pkg.vhd
+  modules/wishbone/wb_irq/wb_irq_slave.vhd
+  modules/wishbone/wb_irq/wb_irq_timer.vhd
+file_type=vhdlSource
+
+[fileset wb_onewire_master]
+files =
+  modules/wishbone/wb_onewire_master/sockit_owm.v[file_type=verilogSource]
+  modules/wishbone/wb_onewire_master/wb_onewire_master.vhd[file_type=vhdlSource]
+  modules/wishbone/wb_onewire_master/xwb_onewire_master.vhd[file_type=vhdlSource]
+
+[fileset wb_serial_lcd]
+files =
+  modules/wishbone/wb_serial_lcd/wb_serial_lcd.vhd
+file_type=vhdlSource
+
+[fileset wb_simple_pwm]
+files =
+  modules/wishbone/wb_simple_pwm/simple_pwm_wbgen2_pkg.vhd
+  modules/wishbone/wb_simple_pwm/simple_pwm_wb.vhd
+  modules/wishbone/wb_simple_pwm/wb_simple_pwm.vhd
+  modules/wishbone/wb_simple_pwm/xwb_simple_pwm.vhd
+file_type=vhdlSource
+
+[fileset wb_simple_timer]
+files =
+  modules/wishbone/wb_simple_timer/wb_tics.vhd
+  modules/wishbone/wb_simple_timer/xwb_tics.vhd
+file_type=vhdlSource
+
+[fileset wb_slave_adapter]
+files =
+  modules/wishbone/wb_slave_adapter/wb_slave_adapter.vhd
+file_type=vhdlSource
+
+[fileset wb_spi]
+files =
+  modules/wishbone/wb_spi/spi_clgen.v
+  modules/wishbone/wb_spi/spi_defines.v
+  modules/wishbone/wb_spi/spi_shift.v
+  modules/wishbone/wb_spi/spi_top.v
+  modules/wishbone/wb_spi/timescale.v
+  modules/wishbone/wb_spi/wb_spi.vhd[file_type=vhdlSource]
+  modules/wishbone/wb_spi/xwb_spi.vhd[file_type=vhdlSource]
+file_type=verilogSource
+
+[fileset wb_spi_flash]
+files =
+  modules/wishbone/wb_spi_flash/wb_spi_flash.vhd
+file_type=vhdlSource
+
+[fileset wb_uart]
+files =
+  modules/wishbone/wb_uart/simple_uart_pkg.vhd
+  modules/wishbone/wb_uart/simple_uart_wb.vhd
+  modules/wishbone/wb_uart/uart_async_rx.vhd
+  modules/wishbone/wb_uart/uart_async_tx.vhd
+  modules/wishbone/wb_uart/uart_baud_gen.vhd
+  modules/wishbone/wb_uart/uart_wb_slave.vhd
+  modules/wishbone/wb_uart/wb_simple_uart.vhd
+  modules/wishbone/wb_uart/xwb_simple_uart.vhd
+file_type=vhdlSource
+
+[fileset wb_vic]
+files =
+  modules/wishbone/wb_vic/vic_prio_enc.vhd
+  modules/wishbone/wb_vic/wb_slave_vic.vhd
+  modules/wishbone/wb_vic/wb_vic.vhd
+  modules/wishbone/wb_vic/xwb_vic.vhd
+file_type=vhdlSource
+
+[provider]
+name = github
+user = qermit
+repo = general-cores
