@@ -15,6 +15,7 @@ files =
   rtl/urv_fetch.v
   rtl/urv_iram.v
   rtl/urv_multiply.v
+  rtl/urv_divide.v
   rtl/urv_regfile.v
   rtl/urv_shifter.v
   rtl/urv_timer.v
