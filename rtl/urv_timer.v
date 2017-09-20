@@ -35,7 +35,7 @@ module urv_timer
    );
 
    parameter g_timer_frequency = 1000;
-   parameter g_clock_frequency = 62500000;
+   parameter g_clock_frequency = 100000000;
 
    localparam g_prescaler = (g_clock_frequency / g_timer_frequency ) - 1;
    
