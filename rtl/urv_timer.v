@@ -28,22 +28,22 @@ module urv_timer
    input 	 clk_i,
    input 	 rst_i,
 
-   output [39:0] csr_time_o,
-   output [39:0] csr_cycles_o,
+   output [63:0] csr_time_o,
+   output [63:0] csr_cycles_o,
   
    output 	 sys_tick_o
    );
 
-   parameter g_timer_frequency = 1000;
+   parameter g_timer_frequency = 1000000;
    parameter g_clock_frequency = 100000000;
 
    localparam g_prescaler = (g_clock_frequency / g_timer_frequency ) - 1;
    
-   reg [23:0] 	 presc;
+   reg [31:0] 	 presc;
    reg 		 presc_tick;
    
-   reg [39:0] 	 cycles;
-   reg [39:0] 	 ticks;
+   reg [63:0] 	 cycles;
+   reg [63:0] 	 ticks;
    
    always@(posedge clk_i)
      if(rst_i)

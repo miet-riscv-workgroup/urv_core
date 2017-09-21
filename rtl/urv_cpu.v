@@ -25,7 +25,7 @@
 
 module urv_cpu
   #(
-    parameter g_timer_frequency = 1000,
+    parameter g_timer_frequency = 1000000,
     parameter g_clock_frequency = 100000000,
     parameter g_with_hw_divide = 0,
     parameter g_with_hw_debug = 0,
@@ -128,7 +128,7 @@ module urv_cpu
    wire  	 rf_bypass_rd_write = rf_rd_write && !x2w_load; // multiply/shift too?
    
    // misc stuff
-   wire [39:0] 	 csr_time, csr_cycles;
+   wire [63:0] 	 csr_time, csr_cycles;
    
    urv_fetch fetch
      (

@@ -104,8 +104,8 @@ module urv_exec
    output 	     dm_load_o,
    input 	     dm_ready_i,
 
-   input [39:0]      csr_time_i,
-   input [39:0]      csr_cycles_i,
+   input [63:0]      csr_time_i,
+   input [63:0]      csr_cycles_i,
    input 	     timer_tick_i
    
    );
