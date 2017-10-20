@@ -31,6 +31,8 @@ module urv_exceptions
    input 	 x_stall_i,
    input 	 x_kill_i,
   
+   input   d_valid_i,
+
    input 	 d_is_csr_i,
    input 	 d_is_eret_i,
   
@@ -216,7 +218,7 @@ module urv_exceptions
 	  if ( d_is_eret_i )
 	    exception_pending <= 0;
 
-          if ( !exception_pending && exception )
+          if ( !exception_pending && exception && d_valid_i )
 	    begin
 	       csr_mepc <= x_exception_pc_i;
 	       csr_mcause <= cause;

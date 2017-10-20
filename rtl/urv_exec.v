@@ -180,6 +180,7 @@ module urv_exec
       .x_stall_i (x_stall_i),
       .x_kill_i (x_kill_i),
       
+      .d_valid_i(d_valid_i),
       .d_is_csr_i(d_is_csr_i),
       .d_is_eret_i (d_is_eret_i),
       .d_fun_i(d_fun_i),
