@@ -29,6 +29,8 @@ entity urv_core is
   generic (
     g_internal_ram_size      : integer := 65536;
     g_internal_ram_init_file : string  := "";
+    g_timer_frequency        : integer := 1000000;
+    g_clock_frequency        : integer := 100000000;
     g_simulation             : boolean := false;
     g_address_bits           : integer := 32
     );
@@ -55,6 +57,10 @@ architecture wrapper of urv_core is
   constant c_mem_address_bits : integer := f_ceil_log2(g_internal_ram_size / 4);
 
   component urv_cpu is
+    generic (
+      g_timer_frequency  : integer;
+      g_clock_frequency  : integer
+      ); 
     port(
       clk_i : in std_logic;
       rst_i : in std_logic;
@@ -234,6 +240,9 @@ begin
   dm_ready      <= '1';
 
   cpu_core : urv_cpu
+    generic map (
+      g_timer_frequency  => g_timer_frequency,
+      g_clock_frequency  => g_clock_frequency)
     port map (
       clk_i            => clk_sys_i,
       rst_i            => cpu_rst,
